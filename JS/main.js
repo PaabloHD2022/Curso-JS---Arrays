@@ -13,12 +13,31 @@ class Productos{
 
     descripcion_completa_productos(){
 
-        return this.id+ " - " +this.item+" - "+this.descripcion+" - "+this.cantidad_min+" - "+" $"+ +this.precio ; 
+        return this.item+" - "+this.descripcion+" - "+this.cantidad_min+" - "+" $"+ +this.precio ; 
     }
 }
 
+/*let list_productos = new Array[Productos]
+
+list_productos[0] = 'AgendasTB', 'Tapa blanda full color', '100 unidades', 10000 ;
+list_productos[1] = 'AgendasTD', 'Tapa dura ByN', '100 unidades', 7000 ; 
+list_productos[2] = 'AgendasTD2', 'Tapa dura full color', '100 unidades', 13000 ; 
+list_productos[3] = 'Almanaques', 'Con base full color', '1000 unidades', 15000 ; 
+list_productos[4] = 'Banners', 'Lona y rollup', '1 unidad', 5000 ; 
+list_productos[5] = 'Bolsas', 'Bolsas de tela con cierre', '500 unidades', 4000 ; 
+list_productos[6] = 'Cajas', 'Diseño personalizado', '500 unidades', 20000 ; 
+list_productos[7] = 'Cartelería', 'Colgante PVC espumado', '1 unidad', 3500 ; 
+list_productos[8] = 'CatálogosAc', 'Acaballado full color', '500 unidades', 11000 ; 
+list_productos[9] = 'CatálogosPre', 'Premiun lomo cuadrado full color', '500 unidades', 25000 ; 
+list_productos[10] = 'CuadernosTB', 'Tapa blanda full color', '100 unidades', 10000 ; 
+list_productos[11] = 'CuadernosTD', 'Tapa dura full color', '100 unidades', 23000 ; 
+list_productos[12] = 'LibrosTB', 'Tapa blanda full color', '100 unidades', 40000 ; 
+list_productos[13] = 'LibrosTD', 'Tapa dura full color', '100 unidades', 65000 ; 
+list_productos[14] = 'RevistasCLom', 'Con lomo full color', '1000 unidades', 150000 ; 
+list_productos[15] = 'RevistasAc', 'Acaballadas full color', '1000 unidades', 70000;*/
+
 let list_productos = new Array() ;
-list_productos.push(new Productos('id: 01','AgendasTB', 'Tapa blanda full color', '100 unidades', 10000,)) ;
+list_productos.push(new Productos('id: 01','AgendasTB', 'Tapa blanda full color', '100 unidades', 10000)) ;
 list_productos.push(new Productos('id: 02','AgendasTD', 'Tapa dura ByN', '100 unidades', 7000)) ;
 list_productos.push(new Productos('id: 03','AgendasTD2', 'Tapa dura full color', '100 unidades', 13000)) ;
 list_productos.push(new Productos('id: 04','Almanaques', 'Con base full color', '1000 unidades', 15000)) ;
@@ -58,15 +77,8 @@ if (adm_prod == "A"){
         }
         
         }else if (adm_prod == "C"){
-            let id = prompt("Ingrese el id del producto que desea eliminar") ;
-            let indice = buscar_id_Producto(id) ;
-
-            if (indice >=1){
-                
-                let selected_ID = prompt("Seguro desea eliminar éste producto..?") ;
-                list_productos[indice].id !== selected_ID ;
-                alert("Se acaba de eliminar el producto seleccionado" +prod_disp()) ;
-            }
+            
+            
 
         }else if (adm_prod == "D"){
 
@@ -114,7 +126,7 @@ function prod_disp(){
 }
 
 
-function buscar_id_Producto(id){
+/*function buscar_id_Producto(id){
     
     let i = 0;
     while ( i < list_productos.length ){
@@ -128,5 +140,5 @@ function buscar_id_Producto(id){
     }
 
     return -1 ;
-}
+}*/
 
