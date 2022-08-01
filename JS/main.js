@@ -43,27 +43,33 @@ if (adm_prod == "A"){
     
     }else if (adm_prod == "B"){ 
         
-        let item = prompt("Ingrese el producto a actualizar") ;
+        let item = prompt("Ingrese el producto a actualizar precio") ;
         let indice = buscarProducto(item) ;
 
         if (indice >=0){
             
-            let precio_nuevo = prompt("Ingrese nuevo importe") ;
-            list_productos[indice].precio = precio_nuevo ;
-            alert("Listado de productos actualizado: " +prod_disp()) ;
+            let precio_nuevo = parseInt(prompt("Ingrese nuevo importe")) ;{
+
+                if(precio_nuevo = isNaN);
+                alert("No ingresaste un precio")
+                prompt("Vuelva a ingresar el importe");
+                
+                list_productos[indice].precio = precio_nuevo ;
+                alert("Listado de productos actualizado: " +prod_disp()) ;
+        }            
         
         }else{
             alert("No ingresaste un producto válido...") ;
         
             }
         
-        }else if (adm_prod == "C"){
-            let idAEliminar = prompt("Ingrese el Id del producto que desea eliminar") ;
-            let indice = buscar_id_Producto(idAEliminar) ;
+        }else if (adm_prod == "C" || "c"){
+            let id = prompt("Ingrese el Id del producto que desea eliminar") ;
+            let indice = buscar_id_Producto(id) ;
 
             if(indice >=0){
-                list_productos = list_productos.filter(list_productos => list_productos.id !== idAEliminar) ;
-                alert("Acaba de eliminar el producto: " +idAEliminar()) ;
+                let list_productos = list_productos.filter(list_productos => list_productos.id !== id) ;
+                alert("Acaba de eliminar el producto: " +prod_disp()) ;
             }
             
         }else if (adm_prod == "D"){
