@@ -37,59 +37,51 @@ list_productos.push(new Productos('id: 16','RevistasAc', 'Acaballadas full color
 
 let adm_prod = prompt("Elija una opción: \n A) Ver listado de productos \n B) Actualizar precio de producto \n C) Eliminar producto \n D) Actualizar descripcion de un producto") ;
 
-if (adm_prod == "A"){
-    
-    alert("Productos disponibles: "+prod_disp())
-    
-    }else if (adm_prod == "B"){ 
+while(adm_prod !="ESC"){
+    switch(adm_prod){
         
-        let item = prompt("Ingrese el producto a actualizar precio") ;
-        let indice = buscarProducto(item) ;
+        case "A":
+            alert("Productos disponibles: " +prod_disp()) ;
+            break;
 
-        if (indice >=0){
+        case "B":
+            let item = prompt("Ingrese el producto a actualizar precio") ;
+            let indice = buscarProducto(item) ;
+
+            indice >=0;
             
-            let precio_nuevo = parseInt(prompt("Ingrese nuevo importe")) ;{
+            let precio_nuevo = parseInt(prompt("Ingrese nuevo importe")) ;
+            list_productos[indice].precio = precio_nuevo ;
+            alert("Listado de productos actualizado: " +prod_disp()) ;
+            break;
 
-                if(precio_nuevo = isNaN);
-                alert("No ingresaste un precio")
-                prompt("Vuelva a ingresar el importe");
-                
-                list_productos[indice].precio = precio_nuevo ;
-                alert("Listado de productos actualizado: " +prod_disp()) ;
-        }            
-        
-        }else{
-            alert("No ingresaste un producto válido...") ;
-        
-            }
-        
-        }else if (adm_prod == "C" || "c"){
+        /* case "C":
             let id = prompt("Ingrese el Id del producto que desea eliminar") ;
-            let indice = buscar_id_Producto(id) ;
+            let indiceId = buscar_id_Producto(id) ;
 
-            if(indice >=0){
-                let list_productos = list_productos.filter(list_productos => list_productos.id !== id) ;
+            indiceId >=0;
+                let list_productos = list_productos.filter(list_productos => list_productos.id !== indiceId) ;
                 alert("Acaba de eliminar el producto: " +prod_disp()) ;
-            }
-            
-        }else if (adm_prod == "D"){
+            brake;
+         */    //NO LOGRO HACERLO FUNCIONAR.
 
+        case "D":
             let descripcion = prompt("Ingrese producto a actualizar") ;
-            let indice = buscarProducto(descripcion) ;
+            let indiceDesc = buscarProducto(descripcion) ;
 
-            if (indice >=0){
-                
-                let nueva_descripcion = prompt("Actualice descripcion de producto seleccionado") ;
-                list_productos[indice].descripcion = nueva_descripcion ;
-                alert("Listado de productos actualizado: " +prod_disp()) ;
-                
-        }else{
-            alert("No ingresaste un producto válido para actualizar descripcion...");
-        }
-
+            indiceDesc >=0;
+            let nueva_descripcion = prompt("Actualice descripcion de producto seleccionado") ;
+            list_productos[indiceDesc].descripcion = nueva_descripcion ;
+            alert("Listado de productos actualizado: " +prod_disp()) ;
+            break;
     }
 
-function buscarProducto(item){
+    adm_prod = prompt("Ingrese: A, B, C o D  para realizar cambios, ESC para salir.");
+}
+
+
+
+    function buscarProducto(item){
     
     let i = 0;
     while ( i < list_productos.length ){
@@ -118,7 +110,7 @@ function prod_disp(){
 }
 
 
-function buscar_id_Producto(id){
+/* function buscar_id_Producto(id){
     
     let i = 0;
     while ( i < list_productos.length ){
@@ -132,5 +124,4 @@ function buscar_id_Producto(id){
     }
 
     return -1 ;
-}
-
+} */
