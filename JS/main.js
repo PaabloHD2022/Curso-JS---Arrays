@@ -59,7 +59,7 @@ if (adm_prod == "A"){
         
         }else if (adm_prod == "C"){
             let idAEliminar = prompt("Ingrese el Id del producto que desea eliminar") ;
-            let indice = buscar_id_Producto(id) ;
+            let indice = buscar_id_Producto(idAEliminar) ;
 
             if(indice >=0){
                 list_productos = list_productos.filter(list_productos => list_productos.id !== idAEliminar) ;
