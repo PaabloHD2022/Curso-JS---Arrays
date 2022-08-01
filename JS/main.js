@@ -56,13 +56,16 @@ while(adm_prod !="ESC"){
             break;
 
         case "C":
-            let id = prompt("Ingrese el Id del producto que desea eliminar") ;
-            let indiceId = buscar_id_Producto(id) ;
+            let idAEliminar = parseInt(prompt("Ingrese el Id del producto que desea eliminar")) ;
+            let indiceId = buscar_id_Producto(idAEliminar) ;
+            console.log(indiceId) ;
 
             indiceId >=0 ;
-                let list_productos = list_productos.filter(list_productos => list_productos.id !== indiceId) ;
-                alert("Acaba de eliminar el producto: " +prod_disp()) ;
-            brake;
+            list_productos = list_productos.filter(list_productos => list_productos.id !== idAEliminar) ;
+            alert("Acaba de eliminar el producto: " +idAEliminar) ;
+            alert("Listado de productos actualizado: " +prod_disp()) ;
+            break;               
+            
         
         case "D":
             let descripcion = prompt("Ingrese producto a actualizar") ;
