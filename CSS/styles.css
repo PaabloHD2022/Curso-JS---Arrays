@@ -13,7 +13,7 @@ body{
     width: 90%;
     text-align: center;
     margin: auto;
-    background-color: #58966c;
+    background-color: #0b6783;
     align-items: center;
 }
 
@@ -26,6 +26,6 @@ body h1{
 
 body p{
     font-family: 'Barlow', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.5em;
     padding: 1rem;
 }
